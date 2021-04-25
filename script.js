@@ -85,7 +85,7 @@ function checkAnswer(answer) {
     showQuestion();
     
 }
-
+//Shows questions
 function showQuestion () {
     listQuestions.innerHTML = "";
 
@@ -124,6 +124,7 @@ function takeQuiz () {
     
 };
 
+//Timer
 var interval = setInterval(function() {
     document:getElementById('timer').innerHTML=timer;
     timer--;
@@ -133,6 +134,17 @@ var interval = setInterval(function() {
     }
 
 }, 4000);
+
+//Function for what to do when the timer runs out which is to go to a new page so initials can enter with timer
+function endQuiz() {
+    console.log("Quiz is over");
+};
+
+//setTimeout is a method that executes a particular function after a specific amount of time has elapsed
+setTimeout(endQuiz, 0);
+
+
+//setInterval is a method repeatedly executes a particular function after a specific amount of time; it will continue until specified otherwise
 
 //start with a for loop
 
