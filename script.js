@@ -65,6 +65,19 @@ let questions = [ {
     choice3: "onmouseover",
     choice4: "clickelement",
     answer: "onclick",
+}, {
+    question: "How does a FOR loop start?",
+    choice1: "for (i <= 8; i++)",
+    choice2: "for (i = 0; i <= 8; i++)",
+    choice3: "for i = 1 to 8",
+    choice4: "for (i = 0; i <= 8)",
+}, {
+
+    question: "What is the correct way to link to the external script called script.js?",
+    choice1: "<script src = 'script.js'>",
+    choice2: "<script href = 'script.js'>",
+    choice3: "<script name = 'script.js'>",
+    choice4: "<a href='script.js'>",
 }
 
 ];
