@@ -1,8 +1,6 @@
-var startTime = 30;
+var startTime = 60;
 var counterIndex = 0;
 var listQuestions = document.getElementById("listQuestions")
-
-
 
 //getElementByID(startButton).addEventListener("click", timer);
 
@@ -20,29 +18,10 @@ var listQuestions = document.getElementById("listQuestions")
 function quiz () {
     
 
-
-
-
-
 }
 
-//If I have to move questions to js file
-// let questions = [
-// ["What is the file extension for JavaScript?", ".js", ".html", ".script", ".java"],
 
-// ["What allows the program to display a dialog box that will notifiy the user that an expected even has occurred?", "alert", "command", "link", "display"],
-
-// ["JavaScript is the same as Java.", "False", "True"],
-
-// ["What event occurs when the user clicks on an HTML element?", "onmouseclick", "onclick", "onmouseover", "clickelement"],
-
-// ["Is JavaScript case-sensitive?", "Yes", "No"],
-
-// ["How does a FOR loop start?", "for (i <= 8; i++<", "for (i = 0; i <= 8; i++", "for i = 1 to 8", "for (i = 0; i <= 8)"]
-
-// ]
-// console.table(questions);
-
+//List of questions
 let questions = [ {
     question: "What is the file extension for JavaScript?",
     choice1: ".js",
@@ -71,6 +50,7 @@ let questions = [ {
     choice2: "for (i = 0; i <= 8; i++)",
     choice3: "for i = 1 to 8",
     choice4: "for (i = 0; i <= 8)",
+    answer: "for (i = 0; i <= 8; i++)"
 }, {
 
     question: "What is the correct way to link to the external script called script.js?",
@@ -78,6 +58,7 @@ let questions = [ {
     choice2: "<script href = 'script.js'>",
     choice3: "<script name = 'script.js'>",
     choice4: "<a href='script.js'>",
+    answer: "<script src = 'script.js'>"
 }
 
 ];
@@ -89,6 +70,8 @@ let questions = [ {
 //     document.getElementById("startButton").click();
     
 // }
+
+//Click button to start quiz
 document.getElementById("startButton").addEventListener("click", takeQuiz)
 
 function checkAnswer(answer) {
@@ -138,12 +121,18 @@ function showQuestion () {
 function takeQuiz () {
     document.querySelector("#startPage").style.display="none";
     showQuestion();
-
-
     
 };
 
+var interval = setInterval(function() {
+    document:getElementById('timer').innerHTML=timer;
+    timer--;
+    if (timer ===0) {
+        clearInterval(interval);
+        console.log("Out of Time!");
+    }
 
+}, 4000);
 
 //start with a for loop
 
