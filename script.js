@@ -137,11 +137,12 @@ var interval = setInterval(function() {
 
 //Function for what to do when the timer runs out which is to go to a new page so initials can enter with timer
 function endQuiz() {
-    console.log("Quiz is over");
+    // console.log("Quiz is over");
+    alert("quiz is over!");
 };
 
 //setTimeout is a method that executes a particular function after a specific amount of time has elapsed
-setTimeout(endQuiz, 0);
+setTimeout(endQuiz, 5000);
 
 
 //setInterval is a method repeatedly executes a particular function after a specific amount of time; it will continue until specified otherwise
