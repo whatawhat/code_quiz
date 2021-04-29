@@ -139,6 +139,9 @@ var interval = setInterval(function() {
 function endQuiz() {
     // console.log("Quiz is over");
     alert("quiz is over!");
+    // window.open("", )
+    // document.open()
+    window.location = "./results.html"
 };
 
 //setTimeout is a method that executes a particular function after a specific amount of time has elapsed
