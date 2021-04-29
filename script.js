@@ -1,6 +1,10 @@
-var startTime = 60000;
-var counterIndex = 5;
+var startTime = 10;
+var counterIndex = 0;
 var listQuestions = document.getElementById("listQuestions")
+var timerElement = document.getElementById("timer")
+var timerId;
+var score = 0;
+var highScore = document.getElementById("high")
 
 //getElementByID(startButton).addEventListener("click", timer);
 
@@ -74,13 +78,19 @@ document.getElementById("startButton").addEventListener("click", takeQuiz)
 function checkAnswer(answer) {
     if (answer===questions[counterIndex].answer) {
         console.log("correct");
+        score = score+10;
     }
     else {
         console.log("incorrect");
-    }
+    //     timerId = startTime-3;
+    // }
     counterIndex++;
-    showQuestion();
     
+    if (counterIndex === questions.length) {
+         endQuiz();
+    } else {
+    showQuestion();
+    }
 }
 //Shows questions
 function showQuestion () {
@@ -100,48 +110,64 @@ function showQuestion () {
 
     var choiceTwo = document.createElement("button")
     choiceTwo.textContent = questions[counterIndex].choice2;
-    choiceTwo.onclick = checkAnswer;
+    choiceTwo.onclick = function(event) {
+        checkAnswer(event.target.innerHTML)};
     listQuestions.append(choiceTwo);
 
     var choiceThree = document.createElement("button")
     choiceThree.textContent = questions[counterIndex].choice3;
-    choiceThree.onclick = checkAnswer;
+    choiceThree.onclick = function(event) {
+        checkAnswer(event.target.innerHTML)};
     listQuestions.append(choiceThree);
 
     var choiceFour = document.createElement("button")
     choiceFour.textContent = questions[counterIndex].choice4;
-    choiceFour.onclick = checkAnswer;
+    choiceFour.onclick = function(event) {
+        checkAnswer(event.target.innerHTML)};
     listQuestions.append(choiceFour);
 };
 
 //Go through questions
 function takeQuiz () {
     document.querySelector("#startPage").style.display="none";
+    timerElement.textContent = startTime;
+    timerId = setInterval(clockTick, 1000);
     showQuestion(); 
 };
 
-//Timer
-var interval = setInterval(function() {
-    document:getElementById('timer').innerHTML=timer;
-    timer--;
-    if (timer === 0) {
-        clearInterval(interval);
-        console.log("Out of Time!");
+function clockTick () {
+    startTime--;
+    timerElement.textContent = startTime;
+    if (startTime <= 0) {
+        clearInterval(timerId);
+        endQuiz();
     }
+}
 
-}, 4000);
+//Timer
+// var interval = setInterval(function() {
+//     document:getElementById('timer').innerHTML=timer;
+//     timer--;
+//     if (timer === 0) {
+//         clearInterval(interval);
+//         console.log("Out of Time!");
+//     }
+
+// }, 4000);
 
 //Function for what to do when the timer runs out which is to go to a new page so initials can enter with timer
 function endQuiz() {
-    // console.log("Quiz is over");
-    alert("quiz is over!");
-    // window.open("", )
-    // document.open()
-    window.location = "./results.html"
+    // alert("quiz is over!");
+    // window.location.href = "./results.html"
+    listQuestions.style.display = "none";
+    document.getElementById("endGame").style.display = "block";
+    console.log(highScore);
+    highScore.textContent = score;
+
 };
 
 //setTimeout is a method that executes a particular function after a specific amount of time has elapsed
-setTimeout(endQuiz, 5000);
+// setTimeout(endQuiz, 5000);
 
 
 
@@ -151,24 +177,24 @@ setTimeout(endQuiz, 5000);
 //I think I want setInterval because time is decreased if an answer is incorrect.
 
 
-getElementById(startButton).onclick(function() {
-    startTime;
-    setInterval(function(){
-        for (i = 0; i > 5; i )
-        counterIndex--;
-            if (counterIndex >= 0) { 
-                //go to the next question
-            }
-            else if (counterIndex === 0) {
-                endQuiz;
-                window.location = "./results.html"
-            }
+// getElementById(startButton).onclick(function() {
+//     startTime;
+//     setInterval(function(){
+//         for (i = 0; i > 5; i )
+//         counterIndex--;
+//             if (counterIndex >= 0) { 
+//                 //go to the next question
+//             }
+//             else if (counterIndex === 0) {
+//                 endQuiz;
+//                 window.location = "./results.html"
+//             }
 
 
-    })
+//     })
 
-    endQuiz;
-})
+//     endQuiz;
+// })
 
 
 

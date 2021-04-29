@@ -4,12 +4,12 @@
 <head>
     <meta charset="en">
     <title>Code Quiz</title>
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <p id="highscore">High Score</p>
-    <p id="timer">Timer: </p>
+    <p>Timer: <span id="timer"></span></p>
     <h1>Code Quiz</h1>
    
 <div id="startPage">
@@ -60,6 +60,21 @@
     <button id="wrongtwo">for i = 1 to 8</button>
     <button id="wrongthree">for (i = 0; i <= 8)</button> -->
 
+
+<div id="endGame">
+    <h1>Scores</h1>
+    <form>
+        <label for="myname">Name</label>
+        <input type="text" id="myname" name="myname">
+    </form>
+    
+    <h2>Your Score <span id="high"></span></h2>
+    
+    
+    
+    <button id="retake">Take Quiz Again</button>
+
+</div>
     <script src="script.js"></script>
 </body>
 
