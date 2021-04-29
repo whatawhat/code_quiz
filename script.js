@@ -67,6 +67,10 @@ let questions = [ {
 
 ];
 
+// function startQuiz () {
+//     document.getElementById("startButton").click();
+    
+// }
 
 //Click button to start quiz
 document.getElementById("startButton").addEventListener("click", takeQuiz)
@@ -78,8 +82,8 @@ function checkAnswer(answer) {
     }
     else {
         console.log("incorrect");
-    //     timerId = startTime-3;
-    // }
+        startTime -= 3;
+    }
     counterIndex++;
     
     if (counterIndex === questions.length) {
@@ -140,6 +144,16 @@ function clockTick () {
     }
 }
 
+//Timer
+// var interval = setInterval(function() {
+//     document:getElementById('timer').innerHTML=timer;
+//     timer--;
+//     if (timer === 0) {
+//         clearInterval(interval);
+//         console.log("Out of Time!");
+//     }
+
+// }, 4000);
 
 //Function for what to do when the timer runs out which is to go to a new page so initials can enter with timer
 function endQuiz() {
@@ -150,10 +164,50 @@ function endQuiz() {
     console.log(highScore);
     highScore.textContent = score;
 
-}};
+};
 
 //setTimeout is a method that executes a particular function after a specific amount of time has elapsed
 // setTimeout(endQuiz, 5000);
 
 
+
+
 //setInterval is a method repeatedly executes a particular function after a specific amount of time; it will continue until specified otherwise
+
+//I think I want setInterval because time is decreased if an answer is incorrect.
+
+
+// getElementById(startButton).onclick(function() {
+//     startTime;
+//     setInterval(function(){
+//         for (i = 0; i > 5; i )
+//         counterIndex--;
+//             if (counterIndex >= 0) { 
+//                 //go to the next question
+//             }
+//             else if (counterIndex === 0) {
+//                 endQuiz;
+//                 window.location = "./results.html"
+//             }
+
+
+//     })
+
+//     endQuiz;
+// })
+
+
+
+
+//start with a for loop
+
+//if correct answer is chosen, add one point to score and show the word "correct" else show the word incorrect and subtract 5 seconds from timer
+
+//when last question is completed, add score and show on final screen
+
+
+//To Do
+//Subtract time if answer is wrong
+//Save initials to save high score
+//Show score
+//Add CSS
