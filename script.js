@@ -1,5 +1,5 @@
-var startTime = 60;
-var counterIndex = 0;
+var startTime = 60000;
+var counterIndex = 5;
 var listQuestions = document.getElementById("listQuestions")
 
 //getElementByID(startButton).addEventListener("click", timer);
@@ -63,9 +63,6 @@ let questions = [ {
 
 ];
 
-//console.log(questions[0].question)
-
-
 // function startQuiz () {
 //     document.getElementById("startButton").click();
     
@@ -120,15 +117,14 @@ function showQuestion () {
 //Go through questions
 function takeQuiz () {
     document.querySelector("#startPage").style.display="none";
-    showQuestion();
-    
+    showQuestion(); 
 };
 
 //Timer
 var interval = setInterval(function() {
     document:getElementById('timer').innerHTML=timer;
     timer--;
-    if (timer ===0) {
+    if (timer === 0) {
         clearInterval(interval);
         console.log("Out of Time!");
     }
@@ -148,7 +144,34 @@ function endQuiz() {
 setTimeout(endQuiz, 5000);
 
 
+
+
 //setInterval is a method repeatedly executes a particular function after a specific amount of time; it will continue until specified otherwise
+
+//I think I want setInterval because time is decreased if an answer is incorrect.
+
+
+getElementById(startButton).onclick(function() {
+    startTime;
+    setInterval(function(){
+        for (i = 0; i > 5; i )
+        counterIndex--;
+            if (counterIndex >= 0) { 
+                //go to the next question
+            }
+            else if (counterIndex === 0) {
+                endQuiz;
+                window.location = "./results.html"
+            }
+
+
+    })
+
+    endQuiz;
+})
+
+
+
 
 //start with a for loop
 
