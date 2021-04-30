@@ -8,22 +8,17 @@ var highScore = document.getElementById("high")
 
 //getElementByID(startButton).addEventListener("click", timer);
 
-//This function will run the quiz allowing user to select answers
-
 //if user chooses the correct answer, they get one point otherwise no points
 
 //if user chooses the correct answer, it shows the word correct
 
 //if user chooses the incorrect answer, they lose 5 seconds
 
-//if user chooses the incorrect answer, the word incorrect shows
-
 //either way, the next question shows
 function quiz () {
     
 
 }
-
 
 //List of questions
 let questions = [ {
@@ -67,10 +62,7 @@ let questions = [ {
 
 ];
 
-// function startQuiz () {
-//     document.getElementById("startButton").click();
-    
-// }
+
 
 //Click button to start quiz
 document.getElementById("startButton").addEventListener("click", takeQuiz)
@@ -144,17 +136,6 @@ function clockTick () {
     }
 }
 
-//Timer
-// var interval = setInterval(function() {
-//     document:getElementById('timer').innerHTML=timer;
-//     timer--;
-//     if (timer === 0) {
-//         clearInterval(interval);
-//         console.log("Out of Time!");
-//     }
-
-// }, 4000);
-
 //Function for what to do when the timer runs out which is to go to a new page so initials can enter with timer
 function endQuiz() {
     // alert("quiz is over!");
@@ -171,10 +152,9 @@ function endQuiz() {
 var nameInput = document.querySelector('myname')
 window.localStorage.setItem("name", nameInput);
 window.localStorage.getItem("name");
-window.localStorage.setItem("score", JSON.stringify(score));
+window.localStorage.setItem("score", JSON.stringify(highscore));
 window.localStorage.getItem("score");
-JSON.parse(window.localStorage.getItem("score"));
-
+//JSON.parse(window.localStorage.getItem("score"));
 
 
 //setTimeout is a method that executes a particular function after a specific amount of time has elapsed
@@ -185,29 +165,6 @@ JSON.parse(window.localStorage.getItem("score"));
 //I think I want setInterval because time is decreased if an answer is incorrect.
 
 
-// getElementById(startButton).onclick(function() {
-//     startTime;
-//     setInterval(function(){
-//         for (i = 0; i > 5; i )
-//         counterIndex--;
-//             if (counterIndex >= 0) { 
-//                 //go to the next question
-//             }
-//             else if (counterIndex === 0) {
-//                 endQuiz;
-//                 window.location = "./results.html"
-//             }
-
-
-//     })
-
-//     endQuiz;
-// })
-
-
-
-
-//start with a for loop
 
 //if correct answer is chosen, add one point to score and show the word "correct" else show the word incorrect and subtract 5 seconds from timer
 
