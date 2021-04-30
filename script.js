@@ -166,11 +166,19 @@ function endQuiz() {
 
 };
 
+
+//Use local storage to store intials and scores
+var nameInput = document.querySelector('myname')
+window.localStorage.setItem("name", nameInput);
+window.localStorage.getItem("name");
+window.localStorage.setItem("score", JSON.stringify(score));
+window.localStorage.getItem("score");
+JSON.parse(window.localStorage.getItem("score"));
+
+
+
 //setTimeout is a method that executes a particular function after a specific amount of time has elapsed
 // setTimeout(endQuiz, 5000);
-
-
-
 
 //setInterval is a method repeatedly executes a particular function after a specific amount of time; it will continue until specified otherwise
 
@@ -207,7 +215,7 @@ function endQuiz() {
 
 
 //To Do
-//Subtract time if answer is wrong
 //Save initials to save high score
 //Show score
 //Add CSS
+//Update to realistic timer
