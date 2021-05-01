@@ -154,7 +154,19 @@ window.localStorage.setItem("name", nameInput);
 window.localStorage.getItem("name");
 window.localStorage.setItem("score", JSON.stringify(highscore));
 window.localStorage.getItem("score");
+document.querySelector('endButton').addEventListener('click', function(event){
+    showScore;
+});
+
+function showScore() {
+    var scoreName = document.createElement('li')
+    nameInput.textContent = nameInput;
+    scoreName.appendChild(nameInput);
+    //document.getElementById("highest").appendChild(nameInput);
+}
 //JSON.parse(window.localStorage.getItem("score"));
+//get score and display in the h2 heading for highest
+
 
 
 //setTimeout is a method that executes a particular function after a specific amount of time has elapsed
