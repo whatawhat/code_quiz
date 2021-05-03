@@ -1,24 +1,28 @@
+//starts timer at 10
 var startTime = 10;
+//counter index starts at 0 for questions arrange
 var counterIndex = 0;
+//list questions and get them by the id in HTML
 var listQuestions = document.getElementById("listQuestions")
+//this is the timer and goes in the timer at the top of the page
 var timerElement = document.getElementById("timer")
+//holds the timer for the quiz to go down
 var timerId;
+//holds the score
 var score = 0;
-var highScore = document.getElementById("high")
+//score results from quiz and goes to end game secion
+var highScore = document.getElementById("myScore")
 
-//getElementByID(startButton).addEventListener("click", timer);
 
-//if user chooses the correct answer, they get one point otherwise no points
-
-//if user chooses the correct answer, it shows the word correct
-
-//if user chooses the incorrect answer, they lose 5 seconds
 
 //either way, the next question shows
 function quiz () {
     
-
 }
+
+//Click button to start quiz
+document.getElementById("startButton").addEventListener("click", takeQuiz)
+
 
 //List of questions
 let questions = [ {
@@ -62,28 +66,6 @@ let questions = [ {
 
 ];
 
-
-
-//Click button to start quiz
-document.getElementById("startButton").addEventListener("click", takeQuiz)
-
-function checkAnswer(answer) {
-    if (answer===questions[counterIndex].answer) {
-        console.log("correct");
-        score = score+10;
-    }
-    else {
-        console.log("incorrect");
-        startTime -= 3;
-    }
-    counterIndex++;
-    
-    if (counterIndex === questions.length) {
-         endQuiz();
-    } else {
-    showQuestion();
-    }
-}
 //Shows questions
 function showQuestion () {
     listQuestions.innerHTML = "";
@@ -127,6 +109,28 @@ function takeQuiz () {
     showQuestion(); 
 };
 
+//Check answers
+function checkAnswer(answer) {
+    if (answer===questions[counterIndex].answer) {
+        console.log("correct");
+        score = score+10;
+    }
+    else {
+        console.log("incorrect");
+        startTime -= 3;
+    }
+    counterIndex++;
+    
+    if (counterIndex === questions.length) {
+         endQuiz();
+    } else {
+    showQuestion();
+    }
+}
+
+
+
+//Timer ticker that counts down
 function clockTick () {
     startTime--;
     timerElement.textContent = startTime;
@@ -136,7 +140,7 @@ function clockTick () {
     }
 }
 
-//Function for what to do when the timer runs out which is to go to a new page so initials can enter with timer
+//What to do when the timer runs out
 function endQuiz() {
     // alert("quiz is over!");
     // window.location.href = "./results.html"
@@ -144,26 +148,48 @@ function endQuiz() {
     document.getElementById("endGame").style.display = "block";
     console.log(highScore);
     highScore.textContent = score;
-
 };
 
-
-//Use local storage to store intials and scores
-var nameInput = document.querySelector('myname')
-window.localStorage.setItem("name", nameInput);
-window.localStorage.getItem("name");
-window.localStorage.setItem("score", JSON.stringify(highscore));
-window.localStorage.getItem("score");
-document.querySelector('endButton').addEventListener('click', function(event){
-    showScore;
-});
-
+//To show saved scores after typing in name and clicking the submit button
 function showScore() {
     var scoreName = document.createElement('li')
     nameInput.textContent = nameInput;
     scoreName.appendChild(nameInput);
     //document.getElementById("highest").appendChild(nameInput);
 }
+
+//Create an input element for initials
+// initTextEL = document.createElement("input");
+// initTextEL.setAttribute("id", "initials-input");
+// initTextEL.setAttribute("type", "text");
+// initTextEL.setAttribute("name", "initials");
+// initTextEL.setAttribute("placeholder", "Enter Initials Here");
+// inNameEl.appendChild(initTextEL);
+
+//Create save button element
+// saveButtonEl = document.createElement("button");
+// saveButtonEl.setAttribute("id" , "save-btn");
+// saveButtonEl.setAttribute("class" ,"save-btn");
+// saveButtonEl.setAttribute("type" , "submit");
+// saveButtonEl.textContent = "Save Score";
+
+// inNameEl.appendChild(saveButtonEl);
+// inNameEl.addEventListener("submit", score);
+
+
+
+//Use local storage to store intials and scores
+var nameInput = document.querySelector('myname')
+var showScore = document.querySelector('myScore')
+window.localStorage.setItem("name", nameInput);
+window.localStorage.getItem("name");
+window.localStorage.setItem("score", showScore);
+window.localStorage.getItem("score");
+document.querySelector('endButton').addEventListener('click', function(event){
+    showScore;
+});
+
+
 //JSON.parse(window.localStorage.getItem("score"));
 //get score and display in the h2 heading for highest
 
