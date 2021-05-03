@@ -189,6 +189,10 @@ document.querySelector('endButton').addEventListener('click', function(event){
     showScore;
 });
 
+//Show name and score in the High Scores section
+function showTopScores() {
+    document.getElementById("submit").addEventListener("click", )
+}
 
 //JSON.parse(window.localStorage.getItem("score"));
 //get score and display in the h2 heading for highest
