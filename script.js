@@ -195,6 +195,7 @@ function showScore() {
     //document.getElementById("highest").appendChild(nameInput);
 }
 
+console.log(showScore);
 
 //Show name and score in the High Scores section
 function showTopScores() {
@@ -230,3 +231,4 @@ function showTopScores() {
 //Add CSS
 //Update to realistic timer
 
+//use <a href=""/home">Retake</a>
