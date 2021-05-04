@@ -171,7 +171,7 @@ function endQuiz() {
 
 
 
-//Use local storage to store intials and scores
+//Use local storage to store initials and scores
 var nameInput = document.getElementById('myname')
 var showScore = document.getElementById('myScore')
 window.localStorage.setItem("name", nameInput);
@@ -185,14 +185,18 @@ window.localStorage.getItem("score");
 //To show saved scores after typing in name and clicking the submit button
 // function showScore() {
     document.getElementById("submit").addEventListener("click", function(event) { 
+        event.preventDefault()
     var scoreName = document.createElement('li')
     //commented out recently
     // nameInput.textContent = nameInput;
     // scoreName.appendChild(nameInput);
     var userName = window.localStorage.getItem("name");
     var userScore = window.localStorage.getItem("score");
-    console.log(userName + userScore);
-    event.preventDefault()
+    //scoreName.innerHTML = userName + userScore;
+    scoreName.innerHTML = nameInput + showScore;
+    //console.log(userName + userScore);
+    document.getElementById("scoreList").appendChild(scoreName)
+
     //document.getElementById("highest").appendChild(nameInput);
 });
 
