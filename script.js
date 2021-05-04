@@ -150,13 +150,6 @@ function endQuiz() {
     highScore.textContent = score;
 };
 
-//To show saved scores after typing in name and clicking the submit button
-function showScore() {
-    var scoreName = document.createElement('li')
-    nameInput.textContent = nameInput;
-    scoreName.appendChild(nameInput);
-    //document.getElementById("highest").appendChild(nameInput);
-}
 
 //Create an input element for initials
 // initTextEL = document.createElement("input");
@@ -179,20 +172,38 @@ function showScore() {
 
 
 //Use local storage to store intials and scores
-var nameInput = document.querySelector('myname')
-var showScore = document.querySelector('myScore')
+var nameInput = document.getElementById('myname')
+var showScore = document.getElementById('myScore')
 window.localStorage.setItem("name", nameInput);
 window.localStorage.getItem("name");
 window.localStorage.setItem("score", showScore);
 window.localStorage.getItem("score");
-document.querySelector('endButton').addEventListener('click', function(event){
-    showScore;
-});
+// document.querySelector('endButton').addEventListener('click', function(event){
+//     showScore;
+// });
+
+//To show saved scores after typing in name and clicking the submit button
+function showScore() {
+    document.getElementById("submit").addEventListener("click");
+    var scoreName = document.createElement('li')
+    //commented out recently
+    // nameInput.textContent = nameInput;
+    // scoreName.appendChild(nameInput);
+    var userName = window.localStorage.getItem("name");
+    var userScore = window.localStorage.getItem("score");
+    console.log(userName + userScore);
+    //document.getElementById("highest").appendChild(nameInput);
+}
+
 
 //Show name and score in the High Scores section
 function showTopScores() {
     document.getElementById("submit").addEventListener("click", )
 }
+
+//First, before displaying it. I would first getItem and save it to a variable and console log that variable to make sure it’s what you expect
+//Use appendChild to dipslay it
+
 
 //JSON.parse(window.localStorage.getItem("score"));
 //get score and display in the h2 heading for highest
@@ -218,3 +229,4 @@ function showTopScores() {
 //Show score
 //Add CSS
 //Update to realistic timer
+
