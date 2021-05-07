@@ -12,16 +12,20 @@ var timerId;
 var score = 0;
 //score results from quiz and goes to end game secion
 var highScore = document.getElementById("myScore")
-
-
+//list of high scores
+var listofhighscores;
+if (localStorage.getItem("listofhighscores") === undefined) {
+    listofhighscores = [];
+} else {
+    listofhighscores = JSON.parse(localStorage.getItem("listofhighscores"))
+};
 
 //either way, the next question shows
 function quiz () {
     
 }
 
-//Click button to start quiz
-document.getElementById("startButton").addEventListener("click", takeQuiz)
+
 
 
 //List of questions
@@ -170,39 +174,47 @@ function endQuiz() {
 // inNameEl.addEventListener("submit", score);
 
 
-
 //Use local storage to store initials and scores
 var nameInput = document.getElementById('myname')
-var showScore = document.getElementById('myScore')
-window.localStorage.setItem("name", nameInput);
-window.localStorage.getItem("name");
-window.localStorage.setItem("score", showScore);
-window.localStorage.getItem("score");
 // document.querySelector('endButton').addEventListener('click', function(event){
 //     showScore;
 // });
 
 //To show saved scores after typing in name and clicking the submit button
 // function showScore() {
+    //Click button to start quiz
+    console.log(document.URL.includes("index.html"));
+if (document.URL.includes("index.html")) {
+    document.getElementById("startButton").addEventListener("click", takeQuiz)
     document.getElementById("submit").addEventListener("click", function(event) { 
         event.preventDefault()
-    var scoreName = document.createElement('li')
-    //commented out recently
-    // nameInput.textContent = nameInput;
-    // scoreName.appendChild(nameInput);
-    var userName = window.localStorage.getItem("name");
-    var userScore = window.localStorage.getItem("score");
-    //scoreName.innerHTML = userName + userScore;
-    scoreName.innerHTML = nameInput + showScore;
-    //console.log(userName + userScore);
-    document.getElementById("scoreList").appendChild(scoreName)
-
-    //document.getElementById("highest").appendChild(nameInput);
+        console.log("This is the final score" + score);
+        console.log("This is the name input" + nameInput.value);
+        listofhighscores.push({name: nameInput.value, score: score});
+        localStorage.setItem("listofhighscores", JSON.stringify(listofhighscores))
+        //localStorage.setItem("name", nameInput.value);
+        //localStorage.setItem("score", score);
+        location.href = "highscore.html";
+    //var scoreName = document.createElement('li')
+    
 });
+
+}
+    
+if (document.URL.includes("highscore.html")) {
+
+console.log("We're in the high score page!");
+//let finalName = localStorage.getItem("name");
+//let finalScore = localStorage.getItem("score");
+var scoreList = document.createElement("h3")
+scoreList.innerHTML = `${finalName} <span>Score: ${finalScore}</span>` 
+document.getElementById("listhighscores").appendChild(scoreList);
+}
+   //for loop and console log to see what it is each name and each score; do in the if statement; do 209 and 210
 
 // showScore();
 
-console.log(showScore);
+//console.log(showScore);
 
 //Show name and score in the High Scores section
 // function showTopScores() {
