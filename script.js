@@ -206,36 +206,29 @@ if (document.URL.includes("highscore.html")) {
 console.log("We're in the high score page!");
 //let finalName = localStorage.getItem("name");
 //let finalScore = localStorage.getItem("score");
-var scoreList = document.createElement("h3")
+/*var scoreList = document.createElement("h3")
 scoreList.innerHTML = `${finalName} <span>Score: ${finalScore}</span>` 
-document.getElementById("listhighscores").appendChild(scoreList);
+document.getElementById("listhighscores").appendChild(scoreList);*/
 }
+
+for (let i = 0; i < listofhighscores.length; i += 1) {
+    var p = document.createElement('h3');
+    p.innerText = listofhighscores[i].name+ ": "+listofhighscores[i].score;
+    document.getElementById("listhighscores").appendChild(p);
+  }
+
+
+
+
+
    //for loop and console log to see what it is each name and each score; do in the if statement; do 209 and 210
 
-// showScore();
-
-//console.log(showScore);
-
-//Show name and score in the High Scores section
-// function showTopScores() {
-//     document.getElementById("submit").addEventListener("click", )
-// }
-
-//First, before displaying it. I would first getItem and save it to a variable and console log that variable to make sure it’s what you expect
-//Use appendChild to dipslay it
 
 
 //JSON.parse(window.localStorage.getItem("score"));
 //get score and display in the h2 heading for highest
 
 
-
-//setTimeout is a method that executes a particular function after a specific amount of time has elapsed
-// setTimeout(endQuiz, 5000);
-
-//setInterval is a method repeatedly executes a particular function after a specific amount of time; it will continue until specified otherwise
-
-//I think I want setInterval because time is decreased if an answer is incorrect.
 
 
 
@@ -245,7 +238,6 @@ document.getElementById("listhighscores").appendChild(scoreList);
 
 
 //To Do
-//Save initials to save high score
 //Show score
 //Add CSS
 //Update to realistic timer
