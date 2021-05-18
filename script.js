@@ -14,12 +14,15 @@ var score = 0;
 var highScore = document.getElementById("myScore")
 //list of high scores
 var listofhighscores;
-if (localStorage.getItem("listofhighscores") === undefined) {
+//console.log(localStorage.getItem("listofhighscores"))
+if (localStorage.getItem("listofhighscores") === null) {
+    console.log("Inside if statement");
     listofhighscores = [];
 } else {
     listofhighscores = JSON.parse(localStorage.getItem("listofhighscores"))
+    console.log("else");
 };
-
+console.log(listofhighscores);
 //either way, the next question shows
 function quiz () {
     
