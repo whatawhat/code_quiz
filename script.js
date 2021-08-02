@@ -1,5 +1,5 @@
 //starts timer at 10
-var startTime = 10;
+var startTime = 60;
 //counter index starts at 0 for questions arrange
 var counterIndex = 0;
 //list questions and get them by the id in HTML
