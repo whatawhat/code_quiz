@@ -124,7 +124,7 @@ function checkAnswer(answer) {
     }
     else {
         console.log("incorrect");
-        startTime -= 3;
+        startTime -= 10;
     }
     counterIndex++;
     
