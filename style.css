@@ -1,3 +1,80 @@
+body{
+    background: #FAF0CA;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#timer{
+    color: #F95738;
+}
+
+#timeMain {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #0D3B66;
+    font-size: 35px;
+    text-align: left;
+}
+
+h1{
+    color: #0D3B66;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 45px;
+    text-align: center;
+}
+
+p {
+    font-size: 25px;
+    color: #0D3B66;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#highscore {
+    font-size: 20px;
+    color: #F95738;
+}
+
+#listQuestions {
+    font-size: 25px;
+    color: #0D3B66;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#startButton {
+    background-color: #F95738;
+    /* background-color: #EE96AB; */
+    color: #0D3B66;
+    font-size: 24px;
+    padding: 12px 28 px;
+    border-radius: 8px;
+}
+
+#button {
+    background-color: #EE96AB;
+    color: #0D3B66;
+    font-size: 16px;
+    padding: 12px 28 px;
+    border-radius: 8px;
+}
+
 #endGame {
     display: none;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+#retake {
+    color: #0D3B66;
+    background-color: #F95738;
+    /* background-color: #EE96AB; */
+    font-size: 24px;
+    padding: 12px 28 px;
+    border-radius: 8px;
+}
+
+#submit {
+    background-color: #EE96AB;
+    color: #0D3B66;
 }
