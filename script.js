@@ -218,11 +218,11 @@ scoreList.innerHTML = `${finalName} <span>Score: ${finalScore}</span>`
 document.getElementById("listhighscores").appendChild(scoreList);*/
 }
 
-// for (let i = 0; i < listofhighscores.length; i += 1) {
-//     var p = document.createElement('h3');
-//     p.innerText = listofhighscores[i].name+ ": "+listofhighscores[i].score;
-//     document.getElementById("listhighscores").appendChild(p);
-//   }
+for (let i = 0; i < listofhighscores.length; i += 1) {
+    var p = document.createElement('h3');
+    p.innerText = listofhighscores[i].name+ ": "+listofhighscores[i].score;
+    document.getElementById("listhighscores").appendChild(p);
+  }
 
 
 
