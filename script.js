@@ -55,20 +55,20 @@ let questions = [ {
     choice4: "clickelement",
     answer: "onclick",
 }, {
-    question: "How does a FOR loop start?",
-    choice1: "for (i <= 8; i++)",
-    choice2: "for (i = 0; i <= 8; i++)",
-    choice3: "for i = 1 to 8",
-    choice4: "for (i = 0; i <= 8)",
-    answer: "for (i = 0; i <= 8; i++)"
+    question: "What is the most common way to style a webpage?",
+    choice1: "CSS",
+    choice2: "MongoDB",
+    choice3: "React",
+    choice4: "HTML",
+    answer: "CSS"
 }, {
 
-    question: "What is the correct way to link to the external script called script.js?",
-    choice1: "<script src = 'script.js'>",
-    choice2: "<script href = 'script.js'>",
-    choice3: "<script name = 'script.js'>",
-    choice4: "<a href='script.js'>",
-    answer: "<script src = 'script.js'>"
+    question: "How can you make an unordered list?",
+    choice1: "li",
+    choice2: "list",
+    choice3: "unordered list",
+    choice4: "ul",
+    answer: "ul"
 }
 
 ];
@@ -84,7 +84,8 @@ function showQuestion () {
     var choiceOne = document.createElement("button")
     choiceOne.textContent = questions[counterIndex].choice1;
     choiceOne.onclick = function(event) {
-        //console.log(event.target.innerHTML);
+        //object.addEventListener("click", myScript);
+        console.log(event.target.innerHTML);
         checkAnswer(event.target.innerHTML);
     };
     listQuestions.append(choiceOne);
@@ -118,7 +119,10 @@ function takeQuiz () {
 
 //Check answers
 function checkAnswer(answer) {
+    console.log(answer);
     if (answer===questions[counterIndex].answer) {
+        // console.log(answer);
+        // console.log(question[counterIndex].answer);
         console.log("correct");
         score = score+10;
     }
@@ -214,11 +218,11 @@ scoreList.innerHTML = `${finalName} <span>Score: ${finalScore}</span>`
 document.getElementById("listhighscores").appendChild(scoreList);*/
 }
 
-for (let i = 0; i < listofhighscores.length; i += 1) {
-    var p = document.createElement('h3');
-    p.innerText = listofhighscores[i].name+ ": "+listofhighscores[i].score;
-    document.getElementById("listhighscores").appendChild(p);
-  }
+// for (let i = 0; i < listofhighscores.length; i += 1) {
+//     var p = document.createElement('h3');
+//     p.innerText = listofhighscores[i].name+ ": "+listofhighscores[i].score;
+//     document.getElementById("listhighscores").appendChild(p);
+//   }
 
 
 
