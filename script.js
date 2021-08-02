@@ -207,10 +207,10 @@ if (document.URL.includes("index.html")) {
 });
 
 }
-    
-if (document.URL.includes("highscore.html")) {
 
+if (document.URL.includes("highscore.html")) {
 console.log("We're in the high score page!");
+console.log(window.location);
 //let finalName = localStorage.getItem("name");
 //let finalScore = localStorage.getItem("score");
 /*var scoreList = document.createElement("h3")
@@ -218,13 +218,16 @@ scoreList.innerHTML = `${finalName} <span>Score: ${finalScore}</span>`
 document.getElementById("listhighscores").appendChild(scoreList);*/
 }
 
+if (document.URL.includes("highscore.html")) {
+    console.log("We're in the high score page!");
+  
 for (let i = 0; i < listofhighscores.length; i += 1) {
     var p = document.createElement('h3');
     p.innerText = listofhighscores[i].name+ ": "+listofhighscores[i].score;
     document.getElementById("listhighscores").appendChild(p);
   }
 
-
+}
 
 
 
