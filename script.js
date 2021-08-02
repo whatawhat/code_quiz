@@ -1,4 +1,4 @@
-//starts timer at 10
+//starts timer at 60
 var startTime = 60;
 //counter index starts at 0 for questions arrange
 var counterIndex = 0;
@@ -155,6 +155,7 @@ function clockTick () {
 function endQuiz() {
     // alert("quiz is over!");
     // window.location.href = "./results.html"
+    startTime = 1;
     listQuestions.style.display = "none";
     document.getElementById("endGame").style.display = "block";
     console.log(highScore);
