@@ -1,49 +1,41 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="en">
+  <head>
+    <meta charset="en" />
     <title>Code Quiz</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-    
-    <p>Timer: <span id="timer"></span></p>
+  <body>
+    <p id="timeMain">Timer: <span id="timer"></span></p>
     <h1>Code Quiz</h1>
-   <a href="highscore.html" id="highscore">View High Score</a>
+    <a href="highscore.html" id="highscore">View High Score</a>
 
-<div id="startPage">
-    <p>Welcome to the JavaScrip Code quiz! There are 6 questions. Press Start Quiz to start the timer and begin the quiz.</p>
+    <div id="startPage">
+      <p>
+        Welcome to the JavaScrip Code quiz! <br>There are 6 questions. Press Start
+        Quiz to start the timer and begin the quiz.
+      </p>
 
-    <button id="startButton">Start Quiz</button>
-</div>
+      <button id="startButton">Start Quiz</button>
+    </div>
 
+    <div id="listQuestions"></div>
 
-<div id="listQuestions">
-    
-</div>
-    
-<div id="endGame">
-    <h2>Your Score <span id="myScore"></span></h2>
-    <p>To save your score, type your name and click submit.</p>
-    <form>
+    <div id="endGame">
+      <h2>Your Score <span id="myScore"></span></h2>
+      <p>To save your score, type your name and click submit.</p>
+      <form>
         <label for="myname">Name</label>
-        <input type="text" id="myname" name="myname">
-        <input type="submit" id="submit" value="Submit">
-    </form>
-        
-    <button id="retake">Take Quiz Again</button>
+        <input type="text" id="myname" name="myname" />
+        <input type="submit" id="submit" value="Submit" />
+      </form>
 
-    <h2 id="highest">High Scores</h2>
-    <ul id="scoreList">
+      <button id="retake">Take Quiz Again</button>
 
-    </ul>
-</div>
+      <h2 id="highest">High Scores</h2>
+      <ul id="scoreList"></ul>
+    </div>
     <script src="script.js"></script>
-</body>
-
-
-
-
+  </body>
 </html>
