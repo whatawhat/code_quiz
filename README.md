@@ -4,6 +4,7 @@
 - [Description](#Description)
 - [How to Use](#how-to-use)
 - [Screenshots](#screenshots)
+- [Link](#link)
 - [Sources](#sources)
 
 ## Description
@@ -25,6 +26,9 @@ This is the end of quiz page where the user can submit their name to the high sc
 
 This is the high score page.
 ![High score page](images/codequizFive.png)
+
+## Link
+Here is the link to the [Code Quiz](https://whatawhat.github.io/codequiz/).
 
 ## Sources
 Created and designed by me. Click [whatawhat](www.github.com/whatawhat) to visit my repository.
