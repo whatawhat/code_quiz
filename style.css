@@ -8,7 +8,6 @@ body{
 }
 
 #timeMain {
-    font-family: Arial, Helvetica, sans-serif;
     color: #0D3B66;
     font-size: 35px;
     text-align: left;
@@ -16,7 +15,6 @@ body{
 
 h1{
     color: #0D3B66;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 45px;
     text-align: center;
 }
@@ -24,7 +22,6 @@ h1{
 p {
     font-size: 25px;
     color: #0D3B66;
-    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
 }
 
@@ -36,13 +33,11 @@ p {
 #listQuestions {
     font-size: 25px;
     color: #0D3B66;
-    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
 }
 
 #startButton {
     background-color: #F95738;
-    /* background-color: #EE96AB; */
     color: #0D3B66;
     font-size: 24px;
     padding: 12px 12px;
@@ -74,15 +69,16 @@ h2 {
     border-radius: 8px;
 }
 
-input [type=text] {
-    width: 50%;
+#myname {
+    width: 20%;
     box-sizing: border-box;
+    padding: 12px 20px;
+    margin: 8px 0;
 }
 
 #retake {
     color: #0D3B66;
     background-color: #F95738;
-    /* background-color: #EE96AB; */
     font-size: 24px;
     padding: 12px 28px;
     border-radius: 8px;
@@ -98,5 +94,17 @@ input [type=text] {
 }
 
 #prac {
-    font-size: 100px;
+    font-size: 25px;
+    color: #0D3B66;
+    border: 2px solid #F95738;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #F95738;
+    border-radius: 8px;
+    border-color: #0D3B66;
+}
+
+#listhighscores {
+    font-size: 15px;
+    color: #0D3B66;
 }
