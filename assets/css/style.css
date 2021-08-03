@@ -76,15 +76,15 @@ h2 {
     margin: 8px 0;
 }
 
-#retake {
+/* #retake {
     color: #0D3B66;
     background-color: #F95738;
     font-size: 24px;
     padding: 12px 28px;
     border-radius: 8px;
-    /* margin-top: 150px;
-    border-top: 50px; */
-}
+    margin-top: 150px;
+    border-top: 50px;
+} */
 
 #submit {
     background-color: #0D3B66;
