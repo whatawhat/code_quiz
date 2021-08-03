@@ -89,24 +89,28 @@ function showQuestion () {
         checkAnswer(event.target.innerHTML);
     };
     listQuestions.append(choiceOne);
+    choiceOne.setAttribute("class", "answerButton");
 
     var choiceTwo = document.createElement("button")
     choiceTwo.textContent = questions[counterIndex].choice2;
     choiceTwo.onclick = function(event) {
         checkAnswer(event.target.innerHTML)};
     listQuestions.append(choiceTwo);
+    choiceTwo.setAttribute("class", "answerButton");
 
     var choiceThree = document.createElement("button")
     choiceThree.textContent = questions[counterIndex].choice3;
     choiceThree.onclick = function(event) {
         checkAnswer(event.target.innerHTML)};
     listQuestions.append(choiceThree);
+    choiceThree.setAttribute("class", "answerButton");
 
     var choiceFour = document.createElement("button")
     choiceFour.textContent = questions[counterIndex].choice4;
     choiceFour.onclick = function(event) {
         checkAnswer(event.target.innerHTML)};
     listQuestions.append(choiceFour);
+    choiceFour.setAttribute("class", "answerButton");
 };
 
 //Go through questions
