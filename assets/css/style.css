@@ -1,0 +1,110 @@
+body{
+    background: #FAF0CA;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#timer{
+    color: #F95738;
+}
+
+#timeMain {
+    color: #0D3B66;
+    font-size: 35px;
+    text-align: left;
+}
+
+h1{
+    color: #0D3B66;
+    font-size: 45px;
+    text-align: center;
+}
+
+p {
+    font-size: 25px;
+    color: #0D3B66;
+    text-align: center;
+}
+
+#highscore {
+    font-size: 20px;
+    color: #F95738;
+}
+
+#listQuestions {
+    font-size: 25px;
+    color: #0D3B66;
+    text-align: center;
+}
+
+#startButton {
+    background-color: #F95738;
+    color: #0D3B66;
+    font-size: 24px;
+    padding: 12px 12px;
+    border-radius: 8px;
+}
+
+#button {
+    background-color: #EE96AB;
+    color: #0D3B66;
+    font-size: 16px;
+    padding: 12px 12px;
+    border-radius: 8px;
+}
+
+#endGame {
+    display: none;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+.answerButton {
+    color: #0D3B66;
+    background-color: #F95738;
+    font-size: 30px;
+    padding: 12px 12px;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+#myname {
+    width: 20%;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+#retake {
+    color: #0D3B66;
+    background-color: #F95738;
+    font-size: 24px;
+    padding: 12px 28px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+#submit {
+    background-color: #0D3B66;
+    color: #FAF0CA;
+    margin-left: 20px;
+    font-size: 25px;
+    border-radius: 8px;
+}
+
+#prac {
+    font-size: 25px;
+    color: #0D3B66;
+    border: 2px solid #F95738;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #F95738;
+    border-radius: 8px;
+    border-color: #0D3B66;
+}
+
+#listhighscores {
+    font-size: 15px;
+    color: #0D3B66;
+}
